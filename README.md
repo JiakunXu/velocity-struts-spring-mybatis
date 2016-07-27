@@ -1,0 +1,1 @@
+# velocity-struts-spring-mybatis
