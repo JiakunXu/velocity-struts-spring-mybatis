@@ -95,23 +95,50 @@
 			<artifactId>alidayu</artifactId>
 		</dependency>
 
-		<!-- dubbo <dependency> <groupId>com.alibaba</groupId> <artifactId>dubbo</artifactId> 
-			</dependency> -->
+		<!-- dubbo
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+		</dependency>
+		-->
 
-		<!-- netty for dubbo <dependency> <groupId>io.netty</groupId> <artifactId>netty</artifactId> 
-			</dependency> -->
+		<!-- netty for dubbo
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty</artifactId>
+		</dependency>
+		-->
 
-		<!-- zookeeper for dubbo <dependency> <groupId>org.apache.zookeeper</groupId> 
-			<artifactId>zookeeper</artifactId> </dependency> -->
+		<!-- zookeeper for dubbo
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+		</dependency>
+		-->
 
-		<!-- zkclient for zookeeper <dependency> <groupId>com.github.sgroschupf</groupId> 
-			<artifactId>zkclient</artifactId> </dependency> -->
+		<!-- zkclient for zookeeper
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+		</dependency>
+		-->
 
-		<!-- curator for zookeeper <dependency> <groupId>com.netflix.curator</groupId> 
-			<artifactId>curator-client</artifactId> </dependency> <dependency> <groupId>com.netflix.curator</groupId> 
-			<artifactId>curator-framework</artifactId> </dependency> -->
+		<!-- curator for zookeeper
+		<dependency>
+			<groupId>com.netflix.curator</groupId>
+			<artifactId>curator-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.netflix.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+		</dependency>
+		-->
 
-		<!-- junit <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
-			</dependency> -->
+		<!-- junit
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		 -->
 	</dependencies>
 </project>
