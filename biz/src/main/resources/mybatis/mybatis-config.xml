@@ -22,12 +22,12 @@
 	</settings>
 
 	<typeAliases>
-		<package name="com.hsh24.xplatform.api.user.bo"/>
+		<package name="com.hsh24.xplatform.api.user.bo" />
 	</typeAliases>
 	
 	<typeHandlers>
 		<!-- 为传入参数加上%后缀，执行前缀查询 -->
-		<typeHandler handler="com.hsh24.xplatform.framework.mybatis.type.PrefixTypeHanlderCallback"/>
+		<typeHandler handler="com.hsh24.xplatform.framework.mybatis.type.PrefixTypeHanlderCallback" />
 		
 		<!-- 为传入参数加上%前缀，执行后缀查询 -->
 		<typeHandler handler="com.hsh24.xplatform.framework.mybatis.type.PostfixTypeHanlderCallback" />
