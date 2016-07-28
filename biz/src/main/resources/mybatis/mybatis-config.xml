@@ -45,7 +45,7 @@
 		<!-- 当执行in参数查询的时候替换“’”字符为空 -->
 		<typeAlias alias="charaRplace" type="com.hsh24.xplatform.framework.ibatis.type.CharacterReplaceHanlderCallback" />
 		
-		<typeAlias alias="user" type="com.hsh24.xplatform.api.user.bo.User" />
+		<package name="com.hsh24.xplatform.api.user.bo"/>
 	</typeAliases>
 
 	<mappers>
