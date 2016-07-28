@@ -1,4 +1,4 @@
-package com.hsh24.xplatform.framework.ibatis.type;
+package com.hsh24.xplatform.framework.mybatis.type;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -14,7 +14,7 @@ import org.apache.ibatis.type.TypeHandler;
  * @author
  * 
  */
-public class PostfixTypeHanlderCallback implements TypeHandler<Object> {
+public class PrefixTypeHanlderCallback implements TypeHandler<Object> {
 
 	@Override
 	public void setParameter(PreparedStatement ps, int i, Object obj, JdbcType jdbcType) throws SQLException {
@@ -26,7 +26,7 @@ public class PostfixTypeHanlderCallback implements TypeHandler<Object> {
 			parameter = parameter.replace("%", "\\%");
 			parameter = parameter.replace("_", "\\_");
 
-			ps.setString(i, "%" + parameter);
+			ps.setString(i, parameter + "%");
 		}
 	}
 

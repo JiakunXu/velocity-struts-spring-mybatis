@@ -1,4 +1,4 @@
-package com.hsh24.xplatform.framework.ibatis.type;
+package com.hsh24.xplatform.framework.mybatis.type;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -15,11 +15,11 @@ import org.apache.ibatis.type.TypeHandler;
  * @author
  * 
  */
-public class DateTimeTypeHanlderCallback implements TypeHandler<Object> {
+public class DateOnlyTypeHanlderCallback implements TypeHandler<Object> {
 
 	@Override
 	public void setParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType) throws SQLException {
-		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		ps.setString(i, df.format(parameter));
 	}
 

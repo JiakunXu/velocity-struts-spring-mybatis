@@ -1,6 +1,7 @@
 <!DOCTYPE mapper
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.hsh24.xplatform.user.dao.IUserDao">
 	
 	<select id="getUserByPassport" parameterType="java.lang.String" resultType="user">

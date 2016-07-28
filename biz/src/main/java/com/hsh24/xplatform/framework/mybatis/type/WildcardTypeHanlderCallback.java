@@ -1,4 +1,4 @@
-package com.hsh24.xplatform.framework.ibatis.type;
+package com.hsh24.xplatform.framework.mybatis.type;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;

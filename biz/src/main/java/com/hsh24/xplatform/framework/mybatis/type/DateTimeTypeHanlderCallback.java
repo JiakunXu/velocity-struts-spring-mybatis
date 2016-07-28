@@ -1,4 +1,4 @@
-package com.hsh24.xplatform.framework.ibatis.type;
+package com.hsh24.xplatform.framework.mybatis.type;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -6,25 +6,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.TypeHandler;
-
-import com.hsh24.xplatform.framework.util.DateUtil;
 
 /**
  * 
  * @author
  * 
  */
-public class NextDateTypeHanlderCallback implements TypeHandler<Object> {
+public class DateTimeTypeHanlderCallback implements TypeHandler<Object> {
 
 	@Override
 	public void setParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType) throws SQLException {
-		Date date = DateUtil.addDays((Date) parameter, 1);
-		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		ps.setString(i, df.format(date));
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		ps.setString(i, df.format(parameter));
 	}
 
 	@Override
