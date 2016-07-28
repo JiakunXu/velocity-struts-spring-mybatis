@@ -11,15 +11,13 @@ import org.apache.ibatis.type.TypeHandler;
 
 /**
  * 
- * @author
+ * @author JiakunXu
  * 
  */
-public class WildcardTypeHanlderCallback implements TypeHandler<Object> {
+public class WildcardTypeHanlderCallback implements TypeHandler<String> {
 
 	@Override
-	public void setParameter(PreparedStatement ps, int i, Object obj, JdbcType jdbcType) throws SQLException {
-		String parameter = (String) obj;
-
+	public void setParameter(PreparedStatement ps, int i, String parameter, JdbcType jdbcType) throws SQLException {
 		if (StringUtils.isBlank(parameter)) {
 			ps.setString(i, "%");
 		} else {
@@ -31,18 +29,18 @@ public class WildcardTypeHanlderCallback implements TypeHandler<Object> {
 	}
 
 	@Override
-	public Object getResult(ResultSet rs, String columnName) throws SQLException {
-		return new UnsupportedOperationException();
+	public String getResult(ResultSet rs, String columnName) throws SQLException {
+		return rs.getString(columnName);
 	}
 
 	@Override
-	public Object getResult(ResultSet rs, int columnIndex) throws SQLException {
-		return new UnsupportedOperationException();
+	public String getResult(ResultSet rs, int columnIndex) throws SQLException {
+		return rs.getString(columnIndex);
 	}
 
 	@Override
-	public Object getResult(CallableStatement cs, int columnIndex) throws SQLException {
-		return new UnsupportedOperationException();
+	public String getResult(CallableStatement cs, int columnIndex) throws SQLException {
+		return cs.getString(columnIndex);
 	}
 
 }

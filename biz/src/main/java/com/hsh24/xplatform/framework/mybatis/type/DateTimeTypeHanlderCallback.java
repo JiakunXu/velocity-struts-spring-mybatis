@@ -12,7 +12,7 @@ import org.apache.ibatis.type.TypeHandler;
 
 /**
  * 
- * @author
+ * @author JiakunXu
  * 
  */
 public class DateTimeTypeHanlderCallback implements TypeHandler<Object> {
@@ -25,17 +25,17 @@ public class DateTimeTypeHanlderCallback implements TypeHandler<Object> {
 
 	@Override
 	public Object getResult(ResultSet rs, String columnName) throws SQLException {
-		return new UnsupportedOperationException();
+		return rs.getObject(columnName);
 	}
 
 	@Override
 	public Object getResult(ResultSet rs, int columnIndex) throws SQLException {
-		return new UnsupportedOperationException();
+		return rs.getObject(columnIndex);
 	}
 
 	@Override
 	public Object getResult(CallableStatement cs, int columnIndex) throws SQLException {
-		return new UnsupportedOperationException();
+		return cs.getObject(columnIndex);
 	}
 
 }

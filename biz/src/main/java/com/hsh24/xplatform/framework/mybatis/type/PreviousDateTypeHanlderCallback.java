@@ -15,31 +15,31 @@ import com.hsh24.xplatform.framework.util.DateUtil;
 
 /**
  * 
- * @author
+ * @author JiakunXu
  * 
  */
-public class PreviousDateTypeHanlderCallback implements TypeHandler<Object> {
+public class PreviousDateTypeHanlderCallback implements TypeHandler<Date> {
 
 	@Override
-	public void setParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType) throws SQLException {
-		Date date = DateUtil.addDays((Date) parameter, -1);
+	public void setParameter(PreparedStatement ps, int i, Date parameter, JdbcType jdbcType) throws SQLException {
+		Date date = DateUtil.addDays(parameter, -1);
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		ps.setString(i, df.format(date));
 	}
 
 	@Override
-	public Object getResult(ResultSet rs, String columnName) throws SQLException {
-		return new UnsupportedOperationException();
+	public Date getResult(ResultSet rs, String columnName) throws SQLException {
+		return rs.getDate(columnName);
 	}
 
 	@Override
-	public Object getResult(ResultSet rs, int columnIndex) throws SQLException {
-		return new UnsupportedOperationException();
+	public Date getResult(ResultSet rs, int columnIndex) throws SQLException {
+		return rs.getDate(columnIndex);
 	}
 
 	@Override
-	public Object getResult(CallableStatement cs, int columnIndex) throws SQLException {
-		return new UnsupportedOperationException();
+	public Date getResult(CallableStatement cs, int columnIndex) throws SQLException {
+		return cs.getDate(columnIndex);
 	}
 
 }
