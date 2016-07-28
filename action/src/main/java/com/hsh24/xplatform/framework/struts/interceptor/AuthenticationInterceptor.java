@@ -2,10 +2,12 @@ package com.hsh24.xplatform.framework.struts.interceptor;
 
 import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.stereotype.Service;
 
 import com.hsh24.xplatform.api.ca.ICAService;
 import com.opensymphony.xwork2.ActionContext;
@@ -17,12 +19,14 @@ import com.opensymphony.xwork2.interceptor.Interceptor;
  * @author JiakunXu
  * 
  */
+@Service
 public class AuthenticationInterceptor implements Interceptor {
 
 	private static final long serialVersionUID = -7498838714747075663L;
 
 	private static final String LOGIN_TIMEOUT = "440";
 
+	@Resource
 	private ICAService caService;
 
 	public void destroy() {
